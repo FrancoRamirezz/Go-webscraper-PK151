@@ -7,7 +7,7 @@ CREATE TABLE cards (
     condition VARCHAR(50) DEFAULT 'Near Mint', -- Card condition
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    UNIQUE(name, set_name, card_number, condition) -- Prevents duplicates
+    UNIQUE(name, set_name, card_number, condition) 
 );
 
 CREATE TABLE prices (
