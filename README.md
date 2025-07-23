@@ -26,5 +26,4 @@ The goal for this project is to make a webscraper for Pokemon 151 price changes 
 
 ---
 
-## 🚀 Getting Started
 
