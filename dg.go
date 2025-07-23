@@ -198,12 +198,12 @@ func (c *Client) readPump() {
 }
 
 func getDBConnectionString() string {
-	// Try to get connection string from environment variables first
+	// Access the database env files
 	if dbURL := os.Getenv("DATABASE_URL"); dbURL != "" {
 		return dbURL
 	}
 
-	// Otherwise, build from individual environment variables or use defaults
+	// you can also access the information directly, using the 
 	host := getEnv("DB_HOST", "localhost")
 	port := getEnv("DB_PORT", "5432")
 	user := getEnv("DB_USER", "postgres")
@@ -399,7 +399,7 @@ func (db *Database) GetCardsForFrontend() ([]Card, error) {
 		return nil, fmt.Errorf("failed to query cards: %v", err)
 	}
 	defer rows.Close()
-
+// took this from a collection of 
 	var cards []Card
 	cardImages := map[string]string{
 		"charizard": "🔥", "pikachu": "⚡", "mew": "💫", "alakazam": "🔮",
